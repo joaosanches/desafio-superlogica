@@ -1,0 +1,10 @@
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Pastry - Choclate Baked', 20, '40.53');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Trout - Rainbow, Fresh', 17, '3.62');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Pork - Caul Fat', 10, '6.89');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Mix - Cappucino Cocktail', 21, '15.97');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Wine - Acient Coast Caberne', 19, '3.74');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Pork - European Side Bacon', 18, '47.25');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Gooseberry', 17, '13.27');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Sparkling Wine - Rose, Freixenet', 8, '48.01');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Dip - Tapenade', 1, '42.87');
+insert into produtos (descricaoProduto, qtdeProduto, precoProduto) values ('Wine - Pinot Noir Mondavi Coastal', 8, '29.28');

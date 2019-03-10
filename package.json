@@ -1,0 +1,13 @@
+{
+  "name": "desafio-superlogica",
+  "version": "1.0.0",
+  "description": "Desafio Superlógica",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass assets/scss/style.scss assets/css/style.css"
+  },
+  "author": "João Paulo Gonçalves Sanches <jpfaipa@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}

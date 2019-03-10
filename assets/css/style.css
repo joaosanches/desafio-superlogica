@@ -1,0 +1,106 @@
+/* CSS GERAL */
+.row-lista-produto, .row-gera-boleto {
+  margin-bottom: 50px;
+}
+
+h1, h2, h3 {
+  color: #808080;
+}
+
+h1 {
+  border-bottom: 3px solid;
+}
+
+.btn-sl {
+  color: #FFF;
+  margin: 20px 0;
+}
+
+.btn-sl:hover {
+  background-color: #FFF;
+}
+
+.alert {
+  margin: 5px 0;
+}
+
+/* Hide HTML5 Up and Down arrows. */
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* 
+ * SASS 
+ * botoes, h1
+*/
+.btn-sl-azul {
+  background-color: #42C4E6;
+  border-color: #42C4E6;
+}
+.btn-sl-azul:hover {
+  border-color: #42C4E6;
+  color: #42C4E6;
+}
+
+.h1-sl-azul {
+  border-color: #42C4E6;
+}
+
+.btn-sl-verde {
+  background-color: #60c6b9;
+  border-color: #60c6b9;
+}
+.btn-sl-verde:hover {
+  border-color: #60c6b9;
+  color: #60c6b9;
+}
+
+.h1-sl-verde {
+  border-color: #60c6b9;
+}
+
+.btn-sl-vermelho {
+  background-color: #F06F78;
+  border-color: #F06F78;
+}
+.btn-sl-vermelho:hover {
+  border-color: #F06F78;
+  color: #F06F78;
+}
+
+.h1-sl-vermelho {
+  border-color: #F06F78;
+}
+
+.btn-sl-amarelo {
+  background-color: #F8D95A;
+  border-color: #F8D95A;
+}
+.btn-sl-amarelo:hover {
+  border-color: #F8D95A;
+  color: #F8D95A;
+}
+
+.h1-sl-amarelo {
+  border-color: #F8D95A;
+}
+
+.btn-sl-roxo {
+  background-color: #755FA6;
+  border-color: #755FA6;
+}
+.btn-sl-roxo:hover {
+  border-color: #755FA6;
+  color: #755FA6;
+}
+
+.h1-sl-roxo {
+  border-color: #755FA6;
+}
+
+/*# sourceMappingURL=style.css.map */

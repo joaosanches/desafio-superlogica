@@ -1,0 +1,61 @@
+/* CSS GERAL */
+
+.row-lista-produto, .row-gera-boleto {
+	margin-bottom: 50px;
+}
+
+h1, h2, h3 {
+	color: #808080;
+}
+
+h1 {
+	border-bottom: 3px solid;
+}
+
+.btn-sl {
+	color: #FFF;
+	margin: 20px 0;
+}
+
+.btn-sl:hover {
+	background-color: #FFF;	
+}
+
+.alert {
+	margin: 5px 0;
+}
+
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/* 
+ * SASS 
+ * botoes, h1
+*/
+$classes-sl: sl-azul, sl-verde, sl-vermelho, sl-amarelo, sl-roxo;
+$cores-sl: #42C4E6, #60c6b9, #F06F78, #F8D95A, #755FA6;
+
+@each $cor in $cores-sl {
+	$indiceCor: index($cores-sl, $cor);
+	$nomeClasse: nth($classes-sl, $indiceCor);
+	
+	.btn-#{$nomeClasse} {
+		background-color: $cor;
+		border-color: $cor;
+		&:hover {
+			border-color: $cor;
+			color: $cor;
+		}
+	}
+
+	.h1-#{$nomeClasse} {
+		border-color: $cor;
+	}
+}
