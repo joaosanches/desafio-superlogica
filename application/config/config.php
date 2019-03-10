@@ -528,3 +528,27 @@ $config['proxy_ips'] = '';
  */
 $config['credencialPJBank'] = "eb2af021c5e2448c343965a7a80d7d090eb64164";
 $config['chavePJBank'] = "a834d47e283dd12f50a1b3a771603ae9dfd5a32c";
+
+/*
+ * Append this to the end of your application/config.php
+ * @see http://stackoverflow.com/questions/3700626/namespace-in-php-codeigniter-framework#21858556
+ */
+ 
+spl_autoload_extensions('.php'); // Only Autoload PHP Files
+
+spl_autoload_register(function($classname) {
+
+    if (strpos($classname, '\\') !== false) {
+        // Namespaced Classes
+        $classfile = (str_replace('\\', '/', $classname));
+
+        if ($classname[0] !== '/') {
+            $classfile = APPPATH . 'libraries/' . $classfile . '.php';
+        }
+        require($classfile);
+    } else if (strpos($classname, 'interface') !== false) {
+        // Interfaces
+        strtolower($classname);
+        require('application/interfaces/' . $classname . '.php');
+    }
+});
