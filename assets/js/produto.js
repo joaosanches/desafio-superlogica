@@ -47,7 +47,13 @@ $(function() {
 				"previous": "Anterior"
 			},
 		},
-		"lengthMenu": [[5, 10, 15, 20], [5, 10, 15, 20]]
+		"lengthMenu": [[5, 10, 15, 20], [5, 10, 15, 20]],
+		"columnDefs": [
+			{ 
+				"searchable": false, 
+				"targets": [2,3,4,5] 
+			}
+		]
 	});
 
 });
