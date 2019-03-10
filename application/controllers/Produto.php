@@ -8,7 +8,7 @@ class Produto extends CI_Controller {
 
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		
+				
 		$this->load->model('Produto_model', 'produtoModel');		
 	}
 
@@ -258,22 +258,33 @@ class Produto extends CI_Controller {
 		} else {
 
 			$camposBoleto = $this->input->post();
+						
+			$this->load->library('PJBank/recebimento');
+			$PJBankRecebimentos = new Recebimento();
+			
+			$boleto = $PJBankRecebimentos->Boletos->NovoBoleto();
 
-			$camposBoleto['vencimento'] = date('m/d/Y', strtotime($this->input->post('vencimento')));
-			$camposBoleto['juros'] = 0;
-			$camposBoleto['multa'] = 0;
-			$camposBoleto['desconto'] = "";
-			$camposBoleto['logo_url'] = "https://pjbank.com.br/assets/images/pj-logo.png";
-			$camposBoleto['texto'] = "Geração de Boleto para Desafio PJBank";
-					
-			$this->load->library('PJBank');
-			$boleto = $this->pjbank->gerarBoleto($camposBoleto);
+			$boleto->setNomeCliente($camposBoleto['nome_cliente'])
+					->setCpfCliente($camposBoleto['cpf_cliente'])
+					->setValor($camposBoleto['valor'])
+					->setVencimento(date('m/d/Y', strtotime($camposBoleto['vencimento'])))
+					->setJuros(0)
+					->setMulta(0)
+					->setDesconto("")
+					->setLogoUrl("https://pjbank.com.br/assets/images/pj-logo.png")
+					->setTexto("Geração de Boleto para Desafio PJBank")
+					->setEnderecoCliente($camposBoleto['endereco_cliente'])
+					->setNumeroCliente($camposBoleto['numero_cliente'])
+					->setComplementoCliente($camposBoleto['complemento_cliente'])
+					->setBairroCliente($camposBoleto['bairro_cliente'])
+					->setCidadeCliente($camposBoleto['cidade_cliente'])
+					->setEstadoCliente($camposBoleto['estado_cliente'])
+					->setCepCliente($camposBoleto['cep_cliente'])
+					->gerar();
 
-			$respostaBoleto = json_decode($boleto);
+			if ($boleto->getLink()) {
 
-			if ($respostaBoleto->status < 300) {
-
-				$mensagemSucessoBoleto = 'Boleto gerado com sucesso. <a id="boleto-gerado" href="' . $respostaBoleto->linkBoleto . '" target="_blank"><i class="fas fa-print"></i> Imprimir novamente.</a>';
+				$mensagemSucessoBoleto = 'Boleto gerado com sucesso. <a id="boleto-gerado" href="' . $boleto->getLink(). '" target="_blank"><i class="fas fa-print"></i> Imprimir novamente.</a>';
 				
 				redirect('produto', $this->session->set_flashdata('sucesso', $mensagemSucessoBoleto));
 			} else {
