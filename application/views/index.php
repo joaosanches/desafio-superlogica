@@ -106,8 +106,8 @@
 			</div>
 			  
       		<div class="modal-footer">
-				<button type="button" class="btn btn-sl btn-sl-azul" data-dismiss="modal">Cancelar</button>
-				<a id="excluir-produto" class="btn btn-sl btn-sl-vermelho" href="#">Excluir</a>
+				<button type="button" class="btn btn-sl btn-sl-azul" data-dismiss="modal"><i class="fas fa-long-arrow-alt-left"></i> Cancelar</button>
+				<a id="excluir-produto" class="btn btn-sl btn-sl-vermelho" href="#"><i class="fas fa-trash-alt"></i> Excluir</a>
       		</div>
     	</div>
   	</div>
@@ -223,7 +223,7 @@
 			</div>
 			  
       		<div class="modal-footer">
-				<button type="button" class="btn btn-sl btn-sl-azul" data-dismiss="modal">Cancelar</button>
+			  	<button type="button" class="btn btn-sl btn-sl-azul" data-dismiss="modal"><i class="fas fa-long-arrow-alt-left"></i> Cancelar</button>
 			</div>
     	</div>
   	</div>
