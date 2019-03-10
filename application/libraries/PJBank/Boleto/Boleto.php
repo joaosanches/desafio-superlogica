@@ -71,6 +71,11 @@ class Boleto
      */
     private $cidade_cliente;
     /**
+     * Estado do cliente final
+     * @var
+     */
+    private $estado_cliente;
+    /**
      * Cidade do cliente final
      * @var
      */
@@ -425,6 +430,14 @@ class Boleto
     public function getCidadeCliente()
     {
         return $this->cidade_cliente;
+	}
+	
+    /**
+     * @return mixed
+     */
+    public function getEstadoCliente()
+    {
+        return $this->estado_cliente;
     }
 
     /**
@@ -434,6 +447,16 @@ class Boleto
     public function setCidadeCliente($cidade_cliente)
     {
         $this->cidade_cliente = $cidade_cliente;
+        return $this;
+	}
+	
+	/**
+     * @param mixed $estado_cliente
+     * @return Boleto
+     */
+    public function setEstadoCliente($estado_cliente)
+    {
+        $this->estado_cliente = $estado_cliente;
         return $this;
     }
 
