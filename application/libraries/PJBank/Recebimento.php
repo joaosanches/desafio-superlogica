@@ -48,16 +48,26 @@ class Recebimento
      */
     public $ContaDigital;
 
+	/**
+	 * Instância do CodeIgniter
+	 * @var 
+	 */
+	protected $CI;
 
     /**
      * PJBank constructor
-     * @param string $credencial
-     * @param string $chave
+     * Parâmetros removidos. 
+	 * As configurações serão armazenadas 
+	 * no arquivo de configuração do CodeIgniter
      */
-    public function __construct($credencial = null, $chave = null)
+    public function __construct()
     {
+		$this->CI =& get_instance();
+		$credencial = $this->CI->config->item('credencialPJBank');
+		$chave = $this->CI->config->item('chavePJBank');
+
         $this->credencial = $credencial;
-        $this->chave = $chave;
+		$this->chave = $chave;
 
         $this->constructorCartao();
         $this->constructorBoletos();
