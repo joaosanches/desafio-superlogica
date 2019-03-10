@@ -43,6 +43,9 @@
 					<button type="submit" class="btn btn-sl btn-sl-verde">
 						<i class="fas fa-save"></i> Salvar
 					</button>
+					<a href="<?php echo site_url();?>" class="btn btn-sl btn-sl-azul" title="Cancelar" alt="Cancelar">
+						<i class="fas fa-long-arrow-alt-left"></i> Cancelar
+					</a>
 				</div>
 			</form>
 		</div>
