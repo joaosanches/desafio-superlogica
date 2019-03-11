@@ -2,8 +2,8 @@
 
 https://github.com/Superlogica/vagas/issues/2
 
-## Dependências
-Baixe as dependências com o composer:
+## Projeto e Dependências
+Clone o projeto e baixe as dependências com o composer:
 
 ```sh
 composer.phar install
