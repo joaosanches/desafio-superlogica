@@ -9,6 +9,8 @@ class Produto_model extends CI_Model {
 			$this->db->where('codigoProduto', $codigoProduto);
 		}
 
+		$this->db->order_by('codigoProduto', 'DESC');
+
 		$query = $this->db->get('produtos');
 		$produto = $query->result();
 			
